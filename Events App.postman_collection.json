@@ -1,0 +1,266 @@
+{
+	"info": {
+		"_postman_id": "b4d92323-9de0-4b3c-8349-c389052d9b3b",
+		"name": "Events App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32073733"
+	},
+	"item": [
+		{
+			"name": "subscribe event",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"events\": [\r\n        {\"name\": \"e1\", \"date\": \"2024-01-07T01:38:00\", \"location\": \"some location_1\", \"participants_num\": 170},\r\n        {\"name\": \"e2\", \"date\": \"2024-01-18T02:38:00\", \"location\": \"some location_2\", \"participants_num\": 50},\r\n        {\"name\": \"e4\", \"date\": \"2024-01-27T02:38:00\", \"location\": \"some location_4\", \"participants_num\": 250},\r\n        {\"name\": \"e5\", \"date\": \"2024-01-02T02:38:00\", \"location\": \"some location_5\", \"participants_num\": 120}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/subscribe/918cd279-3a60-4ba2-9719-db0a92ebdf56",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscribe",
+						"918cd279-3a60-4ba2-9719-db0a92ebdf56"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "events",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"events\": [\r\n        {\"name\": \"e1\", \"date\": \"2024-01-07T01:38:00\", \"location\": \"some location_1\", \"participants_num\": 170},\r\n        {\"name\": \"e2\", \"date\": \"2024-01-18T02:38:00\", \"location\": \"some location_2\", \"participants_num\": 50},\r\n        {\"name\": \"e4\", \"date\": \"2024-01-27T02:38:00\", \"location\": \"some location_4\", \"participants_num\": 250},\r\n        {\"name\": \"e5\", \"date\": \"2024-01-02T02:38:00\", \"location\": \"some location_5\", \"participants_num\": 120}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"updates\": [\r\n        {\r\n            \"id\": \"cc3dad5f-b757-426b-b821-bf34a91a28d2\",\r\n            \"location\": \"udpate location_1\"\r\n        },\r\n        {\r\n            \"id\": \"725263ec-a8bf-49c7-84cc-aa86dbd3f1ac\",\r\n            \"location\": \"update location_2\",\r\n            \"participants_num\": 58\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"location\": \"udpate location_1\",\r\n    \"participants_num\": 170\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/events/cc3dad5f-b757-426b-b821-bf34a91a28d2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"cc3dad5f-b757-426b-b821-bf34a91a28d2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "events",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events"
+					],
+					"query": [
+						{
+							"key": "num_participant",
+							"value": "120",
+							"disabled": true
+						},
+						{
+							"key": "sort_by",
+							"value": "creation_date",
+							"disabled": true
+						},
+						{
+							"key": "name",
+							"value": "5",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "event id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/events/e29a07f3-8ec9-4880-bac0-56bd864862b5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"e29a07f3-8ec9-4880-bac0-56bd864862b5"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete event id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"events\": [\r\n        {\"name\": \"E1\", \"date\": \"01-07-2024\", \"location\": \"some location\", \"participants_num\": 150}\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/events/be905ae2-74fa-4d6f-ba15-3969bfe354b4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events",
+						"be905ae2-74fa-4d6f-ba15-3969bfe354b4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete events",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"events\": [\r\n        \"6fce4527-eb9e-44bd-9ec8-292478880c1c\",\r\n        \"af4b91c3-e1c2-4363-9d91-bab14c841092\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete admin",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"permanent\": true,\r\n    \"events\": [\r\n        \"6fce4527-eb9e-44bd-9ec8-292478880c1c\",\r\n        \"af4b91c3-e1c2-4363-9d91-bab14c841092\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/admin/events",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"admin",
+						"events"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
